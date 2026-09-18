@@ -1,0 +1,37 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+config/api_keys.csv
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node-based MCP launchers
+node_modules/
+
+# Runtime state and sensitive browser sessions
+runtime/
+logs/
+artifacts/
+chrome_profiles/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

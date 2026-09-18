@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser=chrome",
+        "--executable-path=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--user-data-dir=E:/AgentArchitecture/chrome_profiles/playwright-agent"
+      ]
+    }
+  }
+}

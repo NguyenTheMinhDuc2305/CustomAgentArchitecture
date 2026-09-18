@@ -1,0 +1,2 @@
+key,provider,model,enabled,priority
+YOUR_API_KEY,openai,MODEL_NAME,true,100

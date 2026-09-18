@@ -1,0 +1,43 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "ssh-gpu-token",
+      "description": "SSH MCP bearer token",
+      "password": true
+    }
+  ],
+  "servers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser=chrome",
+        "--executable-path=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--user-data-dir=E:/AgentArchitecture/chrome_profiles/playwright-agent"
+      ]
+    },
+
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--executable-path=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--user-data-dir=E:/AgentArchitecture/chrome_profiles/devtools-agent",
+        "--no-usage-statistics"
+      ]
+    },
+
+    "ssh-gpu": {
+      "type": "http",
+      "url": "http://127.0.0.1:3000/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:ssh-gpu-token}"
+      }
+    }
+  }
+}
